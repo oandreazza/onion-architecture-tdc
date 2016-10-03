@@ -21,19 +21,14 @@ public class EventService implements EventServiceInterface {
 	}
 
 	@Override
-	public List<Event> getNextEvent(Integer numberOfEvents) {
+	public List<Event> getUpComingEvents(Integer numberOfEvents) {
 		return dao.list().stream().limit(numberOfEvents).collect(Collectors.toList());
 	}
 
 	@Override
 	public List<Event> listAvailableEvents() {
-		return null;
+		return dao.listAvailable();
 	}
 
-	@Override
-	public boolean isSoldOut(Event event) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 }

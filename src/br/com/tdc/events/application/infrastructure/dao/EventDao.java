@@ -8,18 +8,9 @@ import br.com.tdc.events.domain.repository.EventRepository;
 public class EventDao extends Dao<Event> implements EventRepository  {
 
 	@Override
-	public Event save(Event event) {
-		return (Event) getSession().persist(event);
-	}
-
-	@Override
-	public List<Event> list() {
-		return getSession().listAll();
-	}
-
-	@Override
-	public Event findById(Long id) {
+	public List<Event> listAvailable() {
 		return null;
 	}
+
 
 }

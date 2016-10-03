@@ -8,9 +8,8 @@ public interface EventServiceInterface {
 
 	public Event create(Event event);
 	
-	public List<Event> getNextEvent(Integer numberOfEvents);
+	public List<Event> getUpComingEvents(Integer numberOfEvents);
 	
 	public List<Event> listAvailableEvents();
 	
-	public boolean isSoldOut(Event event);
 }
